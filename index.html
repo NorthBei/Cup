@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CUP</title>
-    <link rel="shortcut icon" type="image/png" href="./asset/cup_logo.png">
+    <link rel="shortcut icon" type="image/png" href="./asset/shortcut.png">
+    <!-- <link rel="shortcut icon" type="image/png" href="./asset/cup_logo.png"> -->
 
     <meta property="og:title" content="全新體感的通話神器" />
     <meta property="og:description" content="打開App，馬上跟好友開始對話！，不用等待訊息回覆，不用在line人海中找人，好友就是有聊不完的話題，隨時想約，隨時想聊，CUP都能幫你快速找到好友。" />
@@ -74,8 +75,8 @@
         height: 0;
         width: 50%;
         height: 50%;
-        width: 100%;
-        height: 100%;
+        /*width: 100%;
+        height: 100%;*/
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -112,6 +113,7 @@
     }
     .logo{
         width: 100px;
+        width: 75px;
     }
     .app_name{
         font-weight: inherit;
@@ -130,6 +132,20 @@
         height: 60px;
         border: 1px solid white;
         border-radius: 10px;
+    }
+
+    .img_container .fix_top{
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .logo_wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .logo_img{
+        height: 25px;
+        margin-right: 10px;
     }
 
     @media screen and  (max-width: 1000px) {
@@ -204,6 +220,11 @@
         .download_link>img{
             height: 40px;
         }
+
+        .img_container .fix_top{
+            transform: translateX(-62%);
+        }
+
     }
 </style>
 
@@ -211,7 +232,10 @@
     <header id="header">
         <nav id="nav">
             <div class="nav_link nav_home">
-                <a href="./index.html">CUP</a>
+                <a href="./index.html" class="logo_wrapper">
+                    <img src="./asset/cup_logo_gray.png" class="logo_img"/>
+                    CUP
+                </a>
                 <img src="./asset/drop_menu.png" class="drop_menu" id="drop_menu">
             </div>
             <ul class="nav_link nav_others">
@@ -229,22 +253,23 @@
     </header>
     <main id="main">
         <section class="layer layer1">
-            <!--<div class="img_container">
+            <div class="img_container">
                 <img src="./asset/person-woman-hand-smartphone.jpg" alt="">
             </div>
             <div class="img_container">
-                <img src="./asset/pexels-photo-42399.jpeg" alt="">
-            </div>-->
+                <img class="fix_top" src="./asset/pexels-photo-42399.jpeg" alt="">
+            </div>
             <div class="img_container">
                 <img src="./asset/pexels-photo-57784.jpeg" alt="">
             </div>
-            <!--<div class="img_container">
+            <div class="img_container">
                 <img src="./asset/pexels-photo-323503.jpeg" alt="">
-            </div>-->
+            </div>
         </section>
         <section class="layer layer2"></section>
         <section class="layer layer3">
-            <img class="logo" src="./asset/cup_logo.png" alt="">
+        <img class="logo" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIiB2aWV3Qm94PSIwIDAgMjk2LjIwNyAzNjguNzgwNTkiIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNDguODk5OTQsLTM5NC43NDczMSkiPjxwYXRoIHN0eWxlPSIiIGQ9Im0gMjgzLjIwNDk0LDM5NC43NDczMSBjIC0xOC45NzMsMCAtMzQuMzA1LDExLjgxNDIgLTM0LjMwNSwzMC43NDU0OSAwLDE4LjkzMTIgMTUuMzMyLDMwLjc0NDggMzQuMzA1LDMwLjc0NDggbCAyMjcuNTk3LDAgYyAxOC44NDcsMCAzNC4zMDUsLTExLjgxMzYgMzQuMzA1LC0zMC43NDQ4IDAsLTE4LjkzMTI5IC0xNS40NTgsLTMwLjc0NTQ5IC0zNC4zMDUsLTMwLjc0NTQ5IHogbSAyLjY3Myw3My43MDc3OSAzMC42NjMsMjcxLjM2NjggYyAxLjIwMywxMC45MzYgMTAuNDIzLDIzLjcwNiAyMS40NDIsMjMuNzA2IGwgMTE3Ljk2NCwwIGMgMTEuMDE5LDAgMjAuMTk4LC0xMi44MTEyIDIxLjQ0LC0yMy43MDYgbCAzMC42NjUsLTI3MS4zNjY4IHoiIGZpbGw9IiNGRkZGRkYiLz48L2c+PC9zdmc+">
+            <!-- <img class="logo" src="./asset/cup_logo.png" alt=""> -->
             <h1 class="app_name">CUP</h1>
             <h2>全新體感的通話神器</h2>
             <p>打開App，馬上跟好友開始對話！<br>
