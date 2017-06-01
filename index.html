@@ -103,22 +103,24 @@
     }
     .layer3>h2{
         font-weight: inherit;
-        font-size: 36px;
+        font-size: 30px;
         margin-top: 15px;
     }
     .layer3>p{
-        font-size: 21px;
+        font-size: 19px;
         line-height: 1.4;
         margin-bottom: 40px;
     }
     .logo{
         width: 100px;
         width: 75px;
+        width: 45px;
     }
     .app_name{
         font-weight: inherit;
         font-size: 36px;
-        margin: 0 0 10px;
+        /*margin: 0 0 10px;*/
+        margin-left: 15px;
     }
     .download_link_wrapper{
         display: flex;
@@ -148,6 +150,12 @@
         margin-right: 10px;
     }
 
+    .app_info_wrapper{
+        display: flex;
+        align-items: center;
+        margin-bottom: -29px;
+    }
+
     @media screen and  (max-width: 1000px) {
         #header{
             padding: 0 20px;
@@ -155,7 +163,7 @@
         }
     }
     
-    @media screen and  (max-width: 950px) {
+    @media screen and  (max-width: 1050px) {
         .img_container>img{
             width: initial;
             height: 100%;
@@ -268,9 +276,11 @@
         </section>
         <section class="layer layer2"></section>
         <section class="layer layer3">
-        <img class="logo" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIiB2aWV3Qm94PSIwIDAgMjk2LjIwNyAzNjguNzgwNTkiIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNDguODk5OTQsLTM5NC43NDczMSkiPjxwYXRoIHN0eWxlPSIiIGQ9Im0gMjgzLjIwNDk0LDM5NC43NDczMSBjIC0xOC45NzMsMCAtMzQuMzA1LDExLjgxNDIgLTM0LjMwNSwzMC43NDU0OSAwLDE4LjkzMTIgMTUuMzMyLDMwLjc0NDggMzQuMzA1LDMwLjc0NDggbCAyMjcuNTk3LDAgYyAxOC44NDcsMCAzNC4zMDUsLTExLjgxMzYgMzQuMzA1LC0zMC43NDQ4IDAsLTE4LjkzMTI5IC0xNS40NTgsLTMwLjc0NTQ5IC0zNC4zMDUsLTMwLjc0NTQ5IHogbSAyLjY3Myw3My43MDc3OSAzMC42NjMsMjcxLjM2NjggYyAxLjIwMywxMC45MzYgMTAuNDIzLDIzLjcwNiAyMS40NDIsMjMuNzA2IGwgMTE3Ljk2NCwwIGMgMTEuMDE5LDAgMjAuMTk4LC0xMi44MTEyIDIxLjQ0LC0yMy43MDYgbCAzMC42NjUsLTI3MS4zNjY4IHoiIGZpbGw9IiNGRkZGRkYiLz48L2c+PC9zdmc+">
-            <!-- <img class="logo" src="./asset/cup_logo.png" alt=""> -->
-            <h1 class="app_name">CUP</h1>
+            <div class="app_info_wrapper">
+                <img class="logo" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGRkZGIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIiB2aWV3Qm94PSIwIDAgMjk2LjIwNyAzNjguNzgwNTkiIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNDguODk5OTQsLTM5NC43NDczMSkiPjxwYXRoIHN0eWxlPSIiIGQ9Im0gMjgzLjIwNDk0LDM5NC43NDczMSBjIC0xOC45NzMsMCAtMzQuMzA1LDExLjgxNDIgLTM0LjMwNSwzMC43NDU0OSAwLDE4LjkzMTIgMTUuMzMyLDMwLjc0NDggMzQuMzA1LDMwLjc0NDggbCAyMjcuNTk3LDAgYyAxOC44NDcsMCAzNC4zMDUsLTExLjgxMzYgMzQuMzA1LC0zMC43NDQ4IDAsLTE4LjkzMTI5IC0xNS40NTgsLTMwLjc0NTQ5IC0zNC4zMDUsLTMwLjc0NTQ5IHogbSAyLjY3Myw3My43MDc3OSAzMC42NjMsMjcxLjM2NjggYyAxLjIwMywxMC45MzYgMTAuNDIzLDIzLjcwNiAyMS40NDIsMjMuNzA2IGwgMTE3Ljk2NCwwIGMgMTEuMDE5LDAgMjAuMTk4LC0xMi44MTEyIDIxLjQ0LC0yMy43MDYgbCAzMC42NjUsLTI3MS4zNjY4IHoiIGZpbGw9IiNGRkZGRkYiLz48L2c+PC9zdmc+">
+                <!-- <img class="logo" src="./asset/cup_logo.png" alt=""> -->
+                <h1 class="app_name">CUP</h1>
+            </div>
             <h2>全新體感的通話神器</h2>
             <p>打開App，馬上跟好友開始對話！<br>
             不用等待訊息回覆，不用在line人海中找人<br>
